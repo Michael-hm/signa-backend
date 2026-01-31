@@ -65,6 +65,13 @@ class PredictRequest(BaseModel):
         description="Lista de 40 frames, cada frame con 63 valores float"
     )
 
+@app.get("/")
+def root():
+    return {
+        "message": "SIGNA backend is running",
+        "docs": "/docs"
+    }
+
 @app.get("/health")
 def health():
     return {
