@@ -1,0 +1,7 @@
+{
+  "window_size": 40,
+  "features": 63,
+  "landmarks": 21,
+  "coords": ["x", "y", "z"],
+  "normalization": "wrist_relative"
+}
