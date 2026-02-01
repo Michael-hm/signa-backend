@@ -50,10 +50,10 @@ model = Model(inputs=inputs, outputs=outputs)
 # -------------------------
 app = FastAPI(title="SIGNA Backend", version="1.0")
 
-# CORS: para que luego Vercel (otro dominio) pueda llamar a esta API
+# para que luego Vercel pueda llamar a esta API
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # en demo OK; en producción pondremos tu dominio de Vercel
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

@@ -17,7 +17,7 @@ layer = TFSMLayer(
     call_endpoint="serving_default"
 )
 
-# ✅ UN SOLO Input
+# UN SOLO Input
 inputs = Input(shape=(WINDOW_SIZE, FEATURES))
 outputs = layer(inputs)
 
