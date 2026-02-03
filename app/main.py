@@ -115,11 +115,8 @@ def predict_sequence(payload: PredictRequest):
         for i in top3_idx
     ]
 
-    top_idx = np.argsort(preds)[-3:][::-1]
-    top3 = [(idx_to_label.get(int(i), "unknown"), float(preds[i])) for i in top_idx]
-
     return {
         "label": label,
         "confidence": confidence,
-        "top3": top3
+        "top3": top3,
     }
